@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trading Strategies</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #222;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: #007bff;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin: 2rem 0;
+      padding: 1rem 2rem;
+      background: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background: #0056b3;
+    }
+
+    .language-selector {
+      margin: 1rem 0;
+      text-align: right;
+    }
+
+    select {
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .quiz-section {
+      margin-top: 2rem;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: #f9f9f9;
+    }
+
+    .quiz-section h3 {
+      margin-bottom: 1rem;
+    }
+
+    .quiz-section button {
+      margin: 0.5rem 0;
+      padding: 0.5rem 1rem;
+      background: #28a745;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .quiz-section button:hover {
+      background: #218838;
+    }
+
+    .quiz-section p {
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+
+   
+
+    .game-section {
+      margin-top: 2rem;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: #f0f8ff;
+    }
+
+    .game-section h3 {
+      margin-bottom: 1rem;
+    }
+
+    .chart-container {
+      margin-top: 2rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="language-selector">
+      <label for="language">Choose Language:</label>
+      <select id="language" onchange="changeLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+      </select>
+    </div>
+    <h1>Trading Strategies</h1>
+    <p><a href="index.html">Back to Home</a></p>
+  </header>
+  <main>
+    <h2>Introduction to Trading Strategies</h2>
+    <p>Successful trading relies on the use of well-defined strategies that help traders navigate market volatility. By understanding and applying effective strategies, traders can make informed decisions and manage risks effectively.</p>
+
+    <h2>Popular Trading Strategies</h2>
+    <ul>
+      <li><strong>Scalping:</strong> A short-term strategy that involves making quick trades to capture small price movements. It requires precision and fast decision-making.</li>
+      <li><strong>Day Trading:</strong> Traders open and close positions within the same trading day, avoiding overnight risks. This strategy relies on technical analysis and market trends.</li>
+      <li><strong>Swing Trading:</strong> A medium-term strategy where traders capitalize on price swings over several days or weeks. It combines technical and fundamental analysis.</li>
+      <li><strong>Position Trading:</strong> A long-term strategy focused on capturing large price trends. It requires patience and a strong understanding of market fundamentals.</li>
+    </ul>
+
+    <h2>Technical Analysis</h2>
+    <p>Technical analysis is the study of past market data, primarily price and volume, to forecast future price movements. This theory assumes that all information affecting price is already reflected in the price itself, and that price moves in trends. By analyzing charts and applying indicators, traders can make predictions about the future direction of currency pairs.</p>
+    <p>Popular technical analysis tools include:</p>
+    <ul>
+      <li><strong>Moving Averages:</strong> The average price of a currency over a specified time period, helping traders identify trends.</li>
+      <li><strong>RSI (Relative Strength Index):</strong> A momentum oscillator that measures the speed and change of price movements to identify overbought or oversold conditions.</li>
+      <li><strong>MACD (Moving Average Convergence Divergence):</strong> A trend-following momentum indicator that shows the relationship between two moving averages of a currency's price.</li>
+    </ul>
+    <p>Technical analysis is a cornerstone of <strong>Day Trading</strong> and <strong>Scalping</strong> strategies, where short-term price movements are the primary focus.</p>
+    
+    <h2>Efficient Market Hypothesis (EMH)</h2>
+    <p>The Efficient Market Hypothesis (EMH) proposes that all available information is fully reflected in the price of assets at any given time. According to EMH, it is impossible to consistently outperform the market by using information that is already publicly available. This means that in the Forex market, price movements are unpredictable and random, making it difficult to consistently profit from short-term price fluctuations.</p>
+    <p>For Forex traders, understanding EMH can be critical in shaping their expectations. Traders who subscribe to the EMH believe that analyzing past prices (technical analysis) or economic factors (fundamental analysis) may not always give them an edge, as the market quickly incorporates all available information into asset prices.</p>
+    
+    <h2>Interactive Quiz</h2>
+    <div class="quiz-section" id="quiz">
+      <h3 id="quiz-question">Loading Question...</h3>
+      <div id="quiz-answers">
+        <!-- Buttons will be dynamically added here -->
+      </div>
+      <p id="quiz-feedback"></p>
+    </div>
+
+<h2>Risk Management Theory</h2>
+<p>Effective risk management is essential for long-term success in Forex trading. Traders use various techniques to protect their capital and minimize losses. One key principle is the <strong>risk-reward ratio</strong>, which compares the potential risk of a trade to the potential reward. For instance, a risk-reward ratio of 1:3 means the trader is willing to risk $1 to potentially earn $3.</p>
+<p>Another crucial aspect of risk management is <strong>position sizing</strong>, which determines how much of your capital you should allocate to each trade. Effective risk management allows traders to avoid large drawdowns and ensure a more sustainable trading approach.</p>
+
+    <h2>Trading Game</h2>
+    <div class="game-section">
+      <h3>Simulated Trade</h3>
+      <p>Practice placing a trade: Choose a strategy and see the outcome of your decisions.</p>
+      <button onclick="alert('You chose Scalping: Quick profits made! +$50')">Scalping</button>
+      <button onclick="alert('You chose Swing Trading: Medium profits! +$100')">Swing Trading</button>
+    </div>
+    
+<h2>Support and Resistance Theory</h2>
+<p>Support and resistance are key concepts in technical analysis. A support level is a price point where a downtrend can be expected to pause due to a concentration of demand. Conversely, a resistance level is where a price rise can pause or reverse due to increased supply.</p>
+<p>Traders often use these levels to identify buy and sell opportunities:</p>
+<ul>
+  <li><strong>Support:</strong> A price level where demand is strong enough to prevent the price from falling further.</li>
+  <li><strong>Resistance:</strong> A price level where selling pressure is strong enough to prevent the price from rising further.</li>
+</ul>
+<p>Understanding support and resistance is fundamental for all types of strategies, but it is particularly important in <strong>Swing Trading</strong> and <strong>Day Trading</strong>.</p>
+
+    <div class="chart-container">
+      <h2>Strategy Performance</h2>
+      <canvas id="strategyChart" width="400" height="200"></canvas>
+    </div>
+
+    <h2>Call to Action</h2>
+    <a href="sign-up.html" class="cta-button">Start Your Trading Journey Now</a>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Dynamic Language Change
+    function changeLanguage(language) {
+      alert('Language switched to: ' + language);
+      // Future functionality: Load content in the selected language
+    }
+
+    // Quiz Data: Questions and Answers
+    const quizData = [
+      {
+        question: "What is the primary focus of scalping?",
+        answers: ["Quick Trades", "Long-Term Investments", "Swing Trends", "Fundamental Analysis"],
+        correct: 0
+      },
+      {
+        question: "What is Day Trading?",
+        answers: ["Holding positions overnight", "Closing positions the same day", "Investing in long-term assets", "Using only leverage trading"],
+        correct: 1
+      },
+      {
+        question: "What does Swing Trading capitalize on?",
+        answers: ["Daily market changes", "Medium-term price swings", "Quick profits in seconds", "Holding assets for years"],
+        correct: 1
+      },
+      {
+        question: "What does Position Trading require?",
+        answers: ["Patience and fundamentals", "Frequent market analysis", "Scalping techniques", "Large capital upfront"],
+        correct: 0
+      },
+      {
+        question: "What is leverage in trading?",
+        answers: ["A risk management tool", "A way to control larger positions with smaller capital", "The interest earned on trades", "A stock market concept"],
+        correct: 1
+      }
+    ];
+
+    let currentQuestionIndex = 0;
+
+    // Function to load a question
+    function loadQuestion() {
+      const quizContainer = document.getElementById("quiz");
+      const questionElem = document.getElementById("quiz-question");
+      const answersContainer = document.getElementById("quiz-answers");
+      const feedbackElem = document.getElementById("quiz-feedback");
+
+      // Clear old content
+      feedbackElem.textContent = "";
+      answersContainer.innerHTML = "";
+
+      // Load the current question and answers
+      const currentQuestion = quizData[currentQuestionIndex];
+      questionElem.textContent = currentQuestion.question;
+
+      currentQuestion.answers.forEach((answer, index) => {
+        const answerButton = document.createElement("button");
+        answerButton.textContent = answer;
+        answerButton.onclick = () => checkAnswer(index);
+        answersContainer.appendChild(answerButton);
+      });
+    }
+
+    // Function to check the answer
+    function checkAnswer(selectedIndex) {
+      const feedbackElem = document.getElementById("quiz-feedback");
+      const currentQuestion = quizData[currentQuestionIndex];
+
+      if (selectedIndex === currentQuestion.correct) {
+        feedbackElem.textContent = "Correct! Loading next question...";
+        feedbackElem.style.color = "green";
+
+        // Move to the next question after a short delay
+        setTimeout(() => {
+          currentQuestionIndex++;
+          if (currentQuestionIndex < quizData.length) {
+            loadQuestion();
+          } else {
+            displayQuizCompletion();
+          }
+        }, 1000);
+      } else {
+        feedbackElem.textContent = "Incorrect. Try again!";
+        feedbackElem.style.color = "red";
+      }
+    }
+
+    // Function to display the completion message
+    function displayQuizCompletion() {
+      const quizContainer = document.getElementById("quiz");
+      quizContainer.innerHTML = `
+        <h3>Congratulations!</h3>
+        <p>You have completed the quiz!</p>
+      `;
+    }
+
+    // Initialize the quiz
+    loadQuestion();
+
+    // Chart.js
+    const ctx = document.getElementById('strategyChart').getContext('2d');
+    const strategyChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Scalping', 'Day Trading', 'Swing Trading', 'Position Trading'],
+        datasets: [{
+          label: 'Average Profits (%)',
+          data: [5, 15, 25, 40],
+          backgroundColor: ['#ff6384', '#36a2eb', '#ffce56', '#4bc0c0']
+        }]
+      }
+    });
+
+    
+  </script>
+</body>
+</html>

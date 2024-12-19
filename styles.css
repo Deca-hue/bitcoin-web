@@ -1,0 +1,280 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+  header {
+    background: #222;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .language-selector {
+    margin-left: 1rem;
+  }
+
+  .language-selector select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    position: relative;
+  }
+
+  nav a:hover {
+    color: #00d1b2;
+  }
+
+  nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #00d1b2;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+
+  nav a:hover::after {
+    width: 100%;
+  }
+
+
+  #hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+  }
+  .cta {
+    background-color: #00d1b2;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  .cta:hover {
+    background-color: #007a69;
+  }
+
+  .security-badge {
+    display: inline-block;
+    background: #00d1b2;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    line-height: 1.2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    clip-path: polygon(50% 0%, 90% 15%, 100% 50%, 90% 85%, 50% 100%, 10% 85%, 0% 50%, 10% 15%);
+  }
+  
+
+  .bitcoin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .bitcoin {
+    width: 250px;
+    height: 250px;
+    background: url('Bitcoin_1000_0001-removebg-preview.png') no-repeat center;
+    background-size: contain;
+    animation: spin 4s linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  #ticker {
+    background: #00d1b2;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  #ticker span {
+    display: inline-block;
+    padding-right: 2rem;
+    animation: scroll 10s linear infinite;
+  }
+
+  #market, #tools, #education, #contact {
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+.education-item:hover{
+transform: scale(1.1,1.1);
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) ;
+}
+  h2 {
+    color: #00d1b2;
+  }
+
+  .market-updates {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+  }
+
+  .market-item {
+    text-align: center;
+    padding: 1rem;
+    background: #eaf4fc;
+    border-radius: 8px;
+    width: 220px;
+  }
+
+  .tools-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+
+  .tool {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+  }
+
+  form label {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  form button {
+    padding: 0.5rem 1rem;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  form button:hover {
+    background: #0056b3;
+  }
+
+  .education-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .education-item {
+    flex: 1;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  #contact form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  #contact input {
+    padding: 0.5rem;
+    width: 60%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  #contact button {
+    padding: 0.5rem 1rem;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  #contact button:hover {
+    background: #218838;
+  }
+
+  body.dark-mode #market, 
+  body.dark-mode #tools, 
+  body.dark-mode #education, 
+  body.dark-mode #contact {
+    background: #1e1e1e;
+    color: #e6bc03;
+  }
+
+  .theme-toggle {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .theme-toggle:hover {
+    background: #00d1b2;
+    color: #222;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #222;
+    color: #fff;
+    margin-top: 2rem;
+  }
+
+  .footer-links a {
+    color: #00d1b2;
+    text-decoration: none;
+    margin: 0 0.5rem;
+  }
+
+  .footer-links a:hover {
+    text-decoration: underline;
+  }

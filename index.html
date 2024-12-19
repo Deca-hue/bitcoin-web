@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forex & Bitcoin Trading</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Forex & Bitcoin Insights</h1>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#market">Market Updates</a>
+      <a href="#tools">Tools</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="language-selector">
+      <select id="language-switcher" onchange="switchLanguage()">
+        <option value="en">English</option>
+        <option value="sw">Swahili</option>
+        <option value="fr">Français</option>
+        <option value="zh">中文</option>
+        <option value="ru">Русский</option>
+      </select>
+      
+    </div>
+  </header>
+
+ <!-- Scrolling Ticker -->
+ <div id="ticker-container">
+  <div id="ticker">
+    <span id="ticker-content">Loading live market data...</span>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="bitcoin-container">
+      <div class="bitcoin"></div>
+    </div>
+    <h2 style="color: #00d1b2;">Your Gateway to Forex and Bitcoin Trading</h2>
+    <p>Get live updates, market insights, and trading tools all in one place.</p>
+    <a href="https://forexgame.io/" class="cta">Try Our Trading Game</a>
+    <div class="security-badge">Secured with SSL</div>
+  </section>
+
+  <!-- Market Updates Section -->
+  <section id="market">
+    <h2>Live Market Updates</h2>
+    <div class="market-updates">
+      <div class="market-item">
+        <h3>Bitcoin (BTC)</h3>
+        <p>Price: <span id="btc-price">$29,000</span></p>
+        <p>Change: <span id="btc-change">+2.5%</span></p>
+      </div>
+      <div class="market-item">
+        <h3>EUR/USD</h3>
+        <p>Price: <span id="eur-usd-price">1.1030</span></p>
+        <p>Change: <span id="eur-usd-change">+0.3%</span></p>
+      </div>
+
+    <div class="market-item">
+        <h3>GBP/USD</h3>
+        <p>Price: <span id="gbp-usd-price">1.2510</span></p>
+        <p>Change: <span id="gbp-usd-change">-0.1%</span></p>
+    </div>
+
+    <div class="market-item">
+        <h3>USD/JPY</h3>
+        <p>Price: <span id="usd-jpy-price">144.22</span></p>
+        <p>Change: <span id="usd-jpy-change">+0.5%</span></p>
+    </div>
+
+    </div>
+  </section>
+
+  <!-- Tools Section -->
+  <section id="tools">
+    <h2>Trading Tools</h2>
+    <div class="tools-container">
+      <!-- Forex Calculator -->
+      <div class="tool">
+        <h3>Forex Calculator</h3>
+        <form id="forex-calculator">
+          <label>Trade Size (Lots): <input type="number" id="trade-size" required></label>
+          <label>Pip Value: <input type="number" id="pip-value" required></label>
+          <button type="button" onclick="calculateProfit()">Calculate</button>
+        </form>
+        <p>Potential Profit: <span id="profit-result">$0.00</span></p>
+      </div>
+
+      <!-- Risk Management Calculator -->
+      <div class="tool">
+        <h3>Risk Management Calculator</h3>
+        <form id="risk-calculator">
+          <label>Account Balance: <input type="number" id="account-balance" required></label>
+          <label>Risk Percentage: <input type="number" id="risk-percentage" required></label>
+          <label>Stop-Loss in Pips: <input type="number" id="stop-loss" required></label>
+          <button type="button" onclick="calculateRisk()">Calculate</button>
+        </form>
+        <p>Recommended Trade Size: <span id="risk-result">0.00 Lots</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Learn About Trading</h2>
+    <div class="education-content">
+      <div class="education-item">
+        <h3>Forex Basics</h3>
+        <p>Understand currency pairs, pip values, and leverage for trading success.📊📉</p>
+       <a href="about trading.html">Read more</a>
+      </div>
+      <div class="education-item">
+        <h3>Bitcoin Fundamentals</h3>
+        <p>Learn how Bitcoin works and its role in global finance.</p>
+        <a href="bitcoin fundamentals.html">Read more</a>
+      </div>
+      <div class="education-item">
+        <h3>Trading Strategies</h3>
+        <p>Explore technical analysis and risk management techniques.📈📉</p>
+        <a href="trading Strategies.html">Read more</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Subscribe for Updates</h2>
+    <p>Join our mailing list to get the latest updates.</p>
+    <form id="subscribe-form" action="/subscribe" method="POST">
+      <input type="email" name="email" placeholder="Your Email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+  
+ <!-- Footer -->
+ <footer>
+  <p>&copy; 2024 Forex & Bitcoin Insights</p>
+  <div class="footer-links">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+    <a href="#">Contact</a>
+  </div>
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitcoin Fundamentals</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #222;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    h1 {
+      color: #f7931a;
+    }
+
+    h2 {
+      color: #f7931a;
+      margin-top: 1.5rem;
+    }
+
+    a {
+      color: #f7931a;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .image-container {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .chart-container {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    canvas {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bitcoin Fundamentals</h1>
+    <p><a href="index.html">Back to Home</a></p>
+  </header>
+  <main>
+    <h2>What is Bitcoin?</h2>
+    <p>Bitcoin is a decentralized digital currency that operates without a central authority or middlemen. It was introduced in 2009 by an unknown individual or group under the pseudonym Satoshi Nakamoto. Bitcoin is powered by blockchain technology, which ensures transparency and security.</p>
+
+    <div class="image-container">
+      <img src="images.jpg" alt="Overview of Bitcoin">
+      <p><em>Illustration: How Bitcoin works</em></p>
+    </div>
+
+    <h2>The Theory of Blockchain Technology</h2>
+    <p>Blockchain technology is the backbone of Bitcoin and other cryptocurrencies. It is a decentralized, distributed ledger that records all transactions across a network of computers. Each "block" contains a list of transactions, and these blocks are linked together in a chain, ensuring transparency and immutability. This decentralized system eliminates the need for a central authority, making it resistant to censorship and fraud.</p>
+    
+    <p><strong>Example:</strong> Every time a Bitcoin transaction is made, it is recorded on the blockchain. Once a block is added to the chain, it cannot be altered, ensuring the integrity and security of the Bitcoin network.</p>
+    
+    <h2>How Bitcoin Works</h2>
+    <ul>
+      <li><strong>Blockchain:</strong> A distributed ledger that records all Bitcoin transactions. It is maintained by a network of nodes using consensus algorithms.</li>
+      <li><strong>Mining:</strong> The process of validating transactions and adding them to the blockchain. Miners are rewarded with new bitcoins for their efforts.</li>
+      <li><strong>Wallets:</strong> Digital tools that allow users to store, send, and receive bitcoins. Wallets can be online, offline, or hardware-based.</li>
+    </ul>
+
+    <div class="chart-container">
+      <canvas id="bitcoinPriceChart"></canvas>
+    </div>
+
+    <h2>Why Use Bitcoin?</h2>
+    <p>Bitcoin offers several benefits over traditional currencies, including:</p>
+    <ul>
+      <li><strong>Decentralization:</strong> No central authority controls Bitcoin.</li>
+      <li><strong>Security:</strong> Transactions are encrypted and irreversible.</li>
+      <li><strong>Global Accessibility:</strong> Anyone with an internet connection can use Bitcoin.</li>
+    </ul>
+
+    <div class="image-container">
+      <img src="wallet.jpg" alt="Bitcoin Wallet">
+      <p><em>Illustration: Bitcoin Wallet Example</em></p>
+    </div>
+    <h2>The Theory of Decentralization</h2>
+<p>One of the core principles of Bitcoin is decentralization. Unlike traditional currencies, which are controlled by central banks, Bitcoin operates without a central authority. Instead, Bitcoin is maintained by a global network of computers (nodes) that verify transactions and secure the network. This decentralization ensures that no single entity has control over the Bitcoin system, reducing the risk of manipulation or censorship.</p>
+
+<p><strong>Example:</strong> A Bitcoin transaction does not need to go through a bank or government institution. Instead, it is verified by multiple independent nodes in the network, ensuring its legitimacy without relying on any centralized authority.</p>
+
+<h2>The Theory of Mining</h2>
+<img src="bit mi.jpg" alt="Bitcoin Wallet">
+<p>Mining is the process by which new bitcoins are created and transactions are added to the blockchain. Miners use powerful computers to solve complex mathematical problems. Once they solve these problems, they validate a new block of transactions and add it to the blockchain. In return, miners are rewarded with newly created bitcoins and transaction fees.</p>
+
+<p><strong>Example:</strong> The process of mining requires miners to compete to solve a cryptographic puzzle. The first miner to solve the puzzle is rewarded with bitcoins, and their solution is added to the blockchain, making it part of the immutable ledger.</p>
+
+    <h2>Risks and Challenges</h2>
+    <p>While Bitcoin has many advantages, it also comes with risks:</p>
+    <ul>
+      <li><strong>Volatility:</strong> Bitcoin's price can fluctuate significantly over short periods.</li>
+      <li><strong>Regulatory Issues:</strong> Different countries have varying regulations regarding Bitcoin.</li>
+      <li><strong>Security Concerns:</strong> Users must protect their wallets and private keys to avoid loss or theft.</li>
+    </ul>
+
+    <h2>Learn More</h2>
+    <p>For a deeper understanding of Bitcoin and its impact, explore our <a href="education.html">Education</a> section.</p>
+  </main>
+  <footer>
+    <p>&copy; 2024 Bitcoin Fundamentals. All rights reserved.</p>
+    <p><a href="contact.html">Contact Us</a></p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('bitcoinPriceChart').getContext('2d');
+    const bitcoinPriceChart = new Chart(ctx, {
+      type: 'line', // Chart type
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'], // X-axis labels
+        datasets: [{
+          label: 'Bitcoin Price (in USD)',
+          data: [43000, 46000, 49000, 51000, 47000, 53000, 56000, 54000, 50000, 52000, 58000, 60000], // Y-axis data
+          backgroundColor: 'rgba(247, 147, 26, 0.2)', // Fill under the line
+          borderColor: 'rgba(247, 147, 26, 1)', // Line color
+          borderWidth: 2,
+          pointBackgroundColor: 'rgba(247, 147, 26, 1)'
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top'
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: false
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
