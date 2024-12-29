@@ -78,6 +78,7 @@ body {
     display: inline-block;
     background: #00d1b2;
     color: #fff;
+    margin-left: 3rem;
     padding: 1rem 2rem;
     text-align: center;
     font-size: 0.9rem;
@@ -278,3 +279,114 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) ;
   .footer-links a:hover {
     text-decoration: underline;
   }
+
+
+  /* General Small Screen Adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  nav a {
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  #hero {
+    padding: 2rem 1rem;
+  }
+
+  .cta {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .market-updates {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .market-item {
+    width: 90%;
+  }
+
+  .tools-container, .education-content {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .tool, .education-item {
+    flex: 1 1 calc(100% - 2rem);
+    margin: 0 auto;
+  }
+
+  #contact form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #contact input {
+    width: 100%;
+  }
+
+  #contact button {
+    width: 100%;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+  }
+
+  .cta {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .bitcoin {
+    width: 150px;
+    height: 150px;
+  }
+
+  .market-item {
+    width: 100%;
+  }
+
+  form label {
+    font-size: 0.9rem;
+  }
+
+  form input, form button {
+    font-size: 0.9rem;
+  }
+
+  .theme-toggle {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+
+  .footer-links a {
+    margin: 0 0.2rem;
+  }
+}

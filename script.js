@@ -67,6 +67,8 @@ simulateMarketUpdates(); // Initial update
         const tradeSize = (accountBalance * (riskPercentage / 100)) / stopLoss;
         document.getElementById('risk-result').innerText = `${tradeSize.toFixed(2)} Lots`;
       }
+
+      //toogle theme
       function toggleTheme() {
         document.body.classList.toggle('dark-mode');
       }
